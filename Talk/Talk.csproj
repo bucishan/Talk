@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EAA8646-6ADC-4011-82F3-03BF33C0A08B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Talk</RootNamespace>
+    <AssemblyName>Talk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Talk.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\chat.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Commons\dll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCChat.Designer.cs">
+      <DependentUpon>UCChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCChatItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCChatItem.Designer.cs">
+      <DependentUpon>UCChatItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCFlowLayoutPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCFlowLayoutPanel.Designer.cs">
+      <DependentUpon>UCFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCMenuItem.Designer.cs">
+      <DependentUpon>UCMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabBlock.Designer.cs">
+      <DependentUpon>UCTabBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPageMusic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPageMusic.Designer.cs">
+      <DependentUpon>UCTabPageMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPageOnlineMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPageOnlineMenu.Designer.cs">
+      <DependentUpon>UCTabPageOnlineMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPagePersonalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTabPagePersonalInfo.Designer.cs">
+      <DependentUpon>UCTabPagePersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCTextBox.Designer.cs">
+      <DependentUpon>UCTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\IconFont\IconFont.cs" />
+    <Compile Include="Commons\Tools\MachineCode.cs" />
+    <Compile Include="Commons\Tools\NotifyIconTool.cs" />
+    <Compile Include="Commons\Tools\RSATool.cs" />
+    <Compile Include="Commons\Tools\SoundTool.cs" />
+    <Compile Include="Commons\Tools\Tools.cs" />
+    <Compile Include="Commons\Tools\Win32.cs" />
+    <Compile Include="Commons\Tools\__Global.cs" />
+    <Compile Include="Commons\UDP\UdpBoardCast.cs" />
+    <Compile Include="Commons\UDP\UdpMsgListen.cs" />
+    <Compile Include="Commons\UDP\UdpSendMessage.cs" />
+    <Compile Include="DB\DBSqlite.cs" />
+    <Compile Include="DB\DBSqliteHelper.cs" />
+    <Compile Include="Entity\Enums.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="Gobangs\Common.cs" />
+    <Compile Include="Gobangs\Gobang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gobangs\Gobang.Designer.cs">
+      <DependentUpon>Gobang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gobangs\NetworkInterface.cs" />
+    <Compile Include="HeadPicTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadPicTools.Designer.cs">
+      <DependentUpon>HeadPicTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MChat.Designer.cs">
+      <DependentUpon>MChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Controls\UCPointButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commons\Controls\UCPointButton.Designer.cs">
+      <DependentUpon>UCPointButton.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCChat.resx">
+      <DependentUpon>UCChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCChatItem.resx">
+      <DependentUpon>UCChatItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCFlowLayoutPanel.resx">
+      <DependentUpon>UCFlowLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCMenuItem.resx">
+      <DependentUpon>UCMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCTabBlock.resx">
+      <DependentUpon>UCTabBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCTabPageMusic.resx">
+      <DependentUpon>UCTabPageMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCTabPageOnlineMenu.resx">
+      <DependentUpon>UCTabPageOnlineMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCTabPagePersonalInfo.resx">
+      <DependentUpon>UCTabPagePersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Controls\UCTextBox.resx">
+      <DependentUpon>UCTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gobangs\Gobang.resx">
+      <DependentUpon>Gobang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadPicTools.resx">
+      <DependentUpon>HeadPicTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MChat.resx">
+      <DependentUpon>MChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\IconFont\FontAwesome.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Commons\dll\System.Data.SQLite.dll" />
+    <None Include="Resources\blank.ico" />
+    <None Include="Resources\chat.ico" />
+    <None Include="Resources\touming.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UpdateCheck\UpdateCheck.csproj">
+      <Project>{812e1c57-81d1-4b10-a382-d054e56822a4}</Project>
+      <Name>UpdateCheck</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

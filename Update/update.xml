@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Update>
+  <Soft Name="Talk">
+    <Verson>1.0.0.0</Verson>
+    <Package>http://shanli.ren/Update.zip</Package>
+    <Description></Description>
+  </Soft>
+</Update>
